@@ -1,9 +1,11 @@
 "use strict";
 
-var greetObject = require("./lib/greetObject"),
-    args = process.argv;
+var greetObject = require("./greetObject"),
+    args = process.argv,
+    input;
 if (args.length >= 3) {
-    console.log(greetObject.greet(args[2]));
+    input = args[2];
 } else {
-    console.log(greetObject.greet());
+    input = "";
 }
+console.log(greetObject.greet(input));
